@@ -19,12 +19,12 @@ import dagger.internal.DaggerCollections;
 public class TestMVPActivity extends BaseActivity<TestView,TestPresenter> implements TestView {
 
     @Inject
-     TestPresenter presenter;
+    TestPresenter presenter;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
 
-       getComponent().inject(this);
+        getActivityComponent().inject(this);
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_test_mvp);
@@ -41,6 +41,7 @@ public class TestMVPActivity extends BaseActivity<TestView,TestPresenter> implem
             }
         });
     }
+
     @Override
     public TestPresenter createPresenter() {
         return presenter;
@@ -49,20 +50,15 @@ public class TestMVPActivity extends BaseActivity<TestView,TestPresenter> implem
     @Override
     public void showMessage(String msg) {
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
-        
+
     }
 
-    /**
-     *
-     * 创建注入器
-     */
-  public PresenterComponent getComponent(){
-        return DaggerPresenterComponent.builder().build();
-
-  }
-
-
 }
+
+
+
+
+
 
 
 
