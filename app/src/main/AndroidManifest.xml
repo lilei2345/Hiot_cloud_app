@@ -12,16 +12,18 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".test.mvptest.model.TestMVPActivity">
+        <activity android:name=".test.lifecycletest.TestLifeCycleActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".main.MainActivity">
+        <activity android:name=".main.MainActivity"></activity>
+        <activity android:name=".test.mvptest.model.TestMVPActivity">
 
         </activity>
+
     </application>
 
 </manifest>
